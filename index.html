@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <title>GPS Reference Clock</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+    <script type="text/javascript" src="SegmentDisplay/segment-display.js"></script>
+    <script type="text/javascript" src="js/signal-meter.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/radio.css" />
+    <link rel="stylesheet" type="text/css" href="css/bullet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="row">
+            <div class="col-xs-6 col-md-6 main">
+                <h2 id="product"></h2>
+            </div>
+            <div class="col-xs-6 col-md-6 main">
+                <h4>Serial # <span id="serialNumber"></span></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 main">
+            </div>
+            <div class="col-xs-6 col-md-6 main">
+                <h6>Manufacturer: <span id="manufacturer"></h6>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-6 main">
+                <h2>Clock1: <span id="clock1"></span></h2>
+            </div>
+            <div class="col-xs-6 col-md-6 main">
+                <h2>Clock2: <span id="clock2"></span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-6 main">
+                <h3 class="badge" id="out1enabled"></h3>
+            </div>
+            <div class="col-xs-6 col-md-6 main">
+                <h3 class="badge" id="out2enabled"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <p>Drive Strength: <span id="driveStrength"></span></p>
+        </div>
+        <div class="row">
+            <p>GPS Frequency:  <span id="gpsFrequency"></span></p>
+        </div>
+        <div class="row">
+            <p>N31:  <span id="n31"></span></p>
+        </div>
+        <div class="row">
+            <p>N2 HS: <span id="n2_hs"></span></p>
+        </div>
+        <div class="row">
+            <p>N2 LS: <span id="n2_ls"></span></p>
+        </div>
+        <div class="row">
+            <p>N1 HS: <span id="n1_hs"></span></p>
+        </div>
+        <div class="row">
+            <p>NC1 LS: <span id="nc1_ls"></span></p>
+        </div>
+        <div class="row">
+            <p>NC2 LS: <span id="nc2_ls"></span></p>
+        </div>
+        <div class="row">
+            <p>VCO: <span id="vco"></span></p>
+        </div>
+        <br>
+        <div class="row">
+            <a href="#">GPS Lock <span class="badge" id="gpsLock"></span></a>
+        </div>
+        <div class="row">
+            <a href="#">PLL Lock <span class="badge" id="pllLock"></span></a>
+        </div>
+
+        <div class="row">
+            <a href="#">Signal lost count <span class="badge" id="signalLostCount"></span></a>
+        </div>
+        <br>
+        <div class="row">
+            <a href="#">Users connected <span class="badge" id="users"></span></a>
+        </div>
+    </div>
+    <script type="text/javaScript" src="./js/gpsControl.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+</body>
+        <footer class="footer">
+              <div class="container">
+                  <p class="text-muted">v1.0.Feb2019 &copy; 2019 Andrew G. Amos <span><a href="https://www.qrz.com/db/M0VVA/">M0VVA</a></span></p>
+              </div>
+      </footer>
+</html>
+
+
