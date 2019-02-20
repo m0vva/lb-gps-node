@@ -1,0 +1,25 @@
+.line {
+  fill: none;
+  stroke: #6F6A91;
+  stroke-width: 1.25px;
+}
+.area {
+	fill: #e7e7e7;
+}
+.axis {
+  shape-rendering: crispEdges;
+}
+.x.axis line {
+	stroke: #fff;
+}
+.x.axis .minor {
+	stroke-opacity: .5;
+}
+.x.axis path {
+	display: none;
+}
+.y.axis line,
+.y.axis path {
+	fill: none;
+	stroke: #000;
+}
