@@ -6,9 +6,9 @@ alerting/reporting in real time.
 
 ## Prerequisites ##
 
-node.js
-npm install mqtt
-npm install node-hid
+node.js\
+npm install mqtt\
+npm install node-hid\
 npm install socket.io
 
 ## Configuration ##
